@@ -1,0 +1,21 @@
+{
+  "name": "ess",
+  "version": "1.0.0",
+  "description": "Reusable CSS and JavaScript UI framework",
+  "keywords": [
+    "css",
+    "ui",
+    "framework",
+    "design-system",
+    "javascript",
+    "components"
+  ],
+  "license": "MIT",
+  "author": "asmingtm",
+  "type": "module",
+  "main": "index.js",
+  "style": "index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
