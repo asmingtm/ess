@@ -70,7 +70,7 @@ img.icon{
     transition: all var(--delay);
     object-fit: contain;
 }
-*:not(.active):hover > img{
+*:not(.active):hover > img.icon{
     background: var(--fg);
 }
 .logo{
