@@ -1,0 +1,12 @@
+[data-theme="light"]{
+    color-scheme: light;
+
+    --lg       : hsl(0, 0%, 100%);        /* LOWEST */
+    --bg       : hsl(210, 25%, 97%);      /* BACKGROUND */
+    --mg       : hsl(210, 20%, 90%);      /* MIDDLE GROUND */
+    --fg       : hsl(210, 15%, 84%);      /* FOREGROUND */
+        
+    --txt      : hsl(220, 20%, 12%);      /* TEXT */
+    --shd      : hsl(220, 10%, 20%);      /* TEXT SHADE */
+    --icon     : hsl(220, 0%, 35%);         /* ICON COLOR */
+}

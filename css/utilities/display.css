@@ -1,0 +1,5 @@
+.parent-hover-show{ display: none; }
+.root-parent-hover-show{ display: none; }
+
+*:has( > .parent-hover-show):hover > .parent-hover-show{ display: inherit; }
+*:has( > * > .root-parent-hover-show):hover > * > .root-parent-hover-show{ display: inherit; }

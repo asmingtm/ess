@@ -1,0 +1,13 @@
+/* ================== flex-row ================== */
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
+/* ================== flex-column ================== */
+
+.flexy{
+    display: flex;
+    flex-direction: column;
+}

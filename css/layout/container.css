@@ -1,0 +1,101 @@
+/* =================> MODULES <================= */
+
+.topic{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+
+    .label {
+        width: 100%;
+        font-size: var(--size-large);
+    }
+}
+
+.action > input{display: none;}
+.nolist {list-style-type: none;}
+
+/* =========================> WIDTH <========================= */
+
+.wfit{width: fit-content;}
+.wfill{width: 100%;}
+
+/* =========================> OVERFLOW <========================= */
+
+.snaplist{overflow: auto;}
+.snaplistx{
+    overflow-x: auto; 
+    scroll-snap-type: inline mandatory;
+}
+.snaplisty{
+    overflow-y: auto;
+    scroll-snap-type: block mandatory;
+}
+.snaplist, .snaplistx, .snaplisty{
+    display: flex;
+    gap: var(--spacing-smaller);
+
+    * {
+        scroll-snap-align: start;
+    }
+}
+
+/* =================> SOLID BACKGROUND <================= */
+
+.block, .highlight{
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--spacing-medium);
+    border-radius: var(--radius);
+}
+
+.block{background: var(--mg);}
+.block .snippet{
+    background: var(--fg);
+    border-color: var(--fg);
+}
+code.block{
+    padding: 0;
+    background: var(--mg);
+    border-radius: var(--radius);
+
+    > .topic{
+        padding-inline: var(--spacing-medium) var(--spacing-small);
+
+        > .label{
+            user-select: none;
+
+            padding-block: var(--spacing-small);
+            font-size: var(--size-medium);
+        }
+    }
+
+    > pre{
+        padding-inline: var(--size-medium);
+        padding-bottom: var(--size-medium);
+
+        font-family: monospace;
+        color: var(--shd);
+    }
+}
+code.block:not(:hover) > .topic > .action {display: none;}
+
+.snippet{
+    width: fit-content;
+    background: var(--mg);
+    padding: var(--spacing-tiny) var(--spacing-smaller);
+    border: var(--thickness) solid var(--fg);
+    border-radius: var(--radius);
+}
+
+.highlight{
+    background: var(--tritary);
+    border: var(--thickness) solid var(--accent);
+}
+.highlight .snippet{
+    background: var(--tritary); 
+    border-color: var(--tritary);
+}
+.highlight .topic *{ color: var(--primary); }

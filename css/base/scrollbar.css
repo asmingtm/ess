@@ -1,0 +1,20 @@
+/* ================== EDGE SCROLLBAR ================== */
+
+::-webkit-scrollbar {
+    width: 8px; height: 8px;
+    transition: all var(--delay);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bg);
+    border: var(--thickness) solid var(--fg);
+
+    transition: all var(--delay);
+}
+::-webkit-scrollbar-thumb:vertical{ border-radius: var(--radius) 0 0 var(--radius); }
+::-webkit-scrollbar-thumb:horizontal{ border-radius: var(--radius) }
+
+::-webkit-scrollbar-thumb:hover{ background: var(--mg); }
+::-webkit-scrollbar-thumb:active{
+    background: var(--accent);
+    border-color: var(--primary);
+}

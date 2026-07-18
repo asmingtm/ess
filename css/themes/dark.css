@@ -1,0 +1,12 @@
+html, [data-theme="dark"]{
+    color-scheme: dark;
+
+    --lg       : hsl(0, 0%, 0%);          /* LOWEST */
+    --bg       : hsl(0, 0%, 3%);          /* BACKGROUND */
+    --mg       : hsl(0, 0%, 8%);          /* MIDDLE GROUND */
+    --fg       : hsl(0, 0%, 14%);          /* FOREGROUND */
+        
+    --txt      : hsl(0, 0%, 100%);        /* TEXT */
+    --shd      : hsl(0, 0%, 74%);         /* TEXT SHADE */
+    --icon     : hsl(0, 0%, 50%);         /* ICON COLOR */
+}

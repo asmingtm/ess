@@ -1,0 +1,56 @@
+.field{
+    width: 100%;
+    
+    position: relative;
+    cursor: text;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: var(--spacing-small);
+    
+    border: var(--thickness) solid var(--fg);
+    border-radius: var(--radius);
+    
+    transition: all var(--delay);
+}
+
+.field:has(:is(input, textarea):focus){
+    border-color: var(--primary);
+}
+.field > input, textarea{
+    padding-inline: var(--spacing-medium);
+    padding-top: var(--spacing-large);
+    flex-grow: 1;
+
+    background: transparent;
+    border: none; outline: none;
+
+    resize: vertical;
+    min-height: var(--size-huge);
+}
+
+/* Adding placeholder or <p> */
+.field > p{
+    position: absolute;
+    top: 0.9em; left: 1em;
+
+    color: var(--icon);
+    transition: all var(--delay);
+}
+
+/* If it contains an icon or a <i> inside the label. */
+.field > i{
+    position: relative;
+    font-size: var(--size-larger);
+}
+.field:has(.icon) {
+    padding-inline: var(--spacing-medium);
+    input{
+        padding: var(--spacing-small);
+    }
+    p{
+        left: 2.7em;
+    }
+}

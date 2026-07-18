@@ -1,0 +1,49 @@
+:is(.switch, .checkbox, .radio){
+    display: inline;
+
+    cursor: pointer;
+    position: relative;
+
+    background: var(--mg);
+    border: var(--thickness) solid var(--fg);
+    border-radius: calc(var(--radius) / 2);
+
+    min-width: var(--toggle);
+    aspect-ratio: 1 / 1;
+
+    > *{ user-select: none; }
+    input{
+        display: none;
+    }
+
+    transition: background var(--delay);
+}
+:is(.switch, .checkbox, .radio):has(input:checked){
+    background: var(--tritary);
+    border-color: var(--accent);
+}
+
+:is(.switch, .checkbox, .radio)::before{
+    content: '';
+    position: absolute;
+
+    z-index: 1;
+    top: 50%; left: 50%;
+    translate: -50% -50%;
+    width: 80%; height: 80%;
+    rotate: 0deg; scale: 0;
+
+    transition: all var(--delay);
+}
+
+.checkbox::before{
+    translate: -50% -60%;
+    width: 50%; height: 100%;
+
+    border: calc(var(--thickness) * 2) solid var(--txt);
+    border-top-width: 0;
+    border-left-width: 0;
+}
+.checkbox:has(input:checked)::before{
+    rotate: 45deg; scale: 0.6;
+}

@@ -1,0 +1,99 @@
+.dropdown{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.8em;
+    gap: 0.3em;
+
+    background: var(--mg);
+    border-radius: var(--r);
+
+    input { display: none; }
+
+    * {
+        user-select: none;
+        font-size: 0.95em;
+        color: var(--shd);
+    }
+
+    b{
+        color: var(--shd);
+
+        display: flex;
+        gap: 0.5em;
+
+        p{
+            font-weight: normal;
+        }
+    }
+
+    b::after{
+        content: '';
+        position: absolute;
+        top: 47%; right: 1.5em;
+        translate: 0 -50%;
+        height: 15%;
+        aspect-ratio: 1 / 1;
+        background: transparent;
+        rotate: 45deg;
+        border: calc(var(--t) * 1.1) solid var(--shd);
+        border-top: 0; border-left: 0;
+
+        transition: all var(--d);
+    }
+
+    li{
+        display: flex;
+        z-index: 1;
+        position: absolute;
+        top: 100%; left: 50%;
+        translate: -50% 0;
+        width: 100%; gap: 0;
+        border-radius: 0 0 var(--r) var(--r);
+
+        background: var(--mg);
+        overflow: auto;
+
+        clip-path: inset(0 0 100% 0);
+
+        transition: all var(--d);
+
+        > label{
+            cursor: pointer;
+            padding: 1em;
+
+            transition: all var(--d);
+        }
+
+        > label:hover{
+            background: var(--fg);
+        }
+
+        > label:has(input:checked){
+            background: var(--accent);
+        }
+    }
+
+    transition: all 500ms;
+}
+
+.dropdown:has(> input:checked){
+    border-radius: var(--r) var(--r) 0 0;
+    
+    transition: all 50ms;
+    transition: background var(--d);
+
+    b::after{
+        rotate: -135deg;
+    }
+
+    li{
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.dropdown:not(:has(> input:checked)):hover{
+    background: var(--fg);
+}

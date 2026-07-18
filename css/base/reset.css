@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    font-family: 'Poppins', 'Robboto', Arial, Helvetica, sans-serif;
+    color: var(--txt);
+
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    position: relative;
+
+    background: var(--bg);
+    height: 100dvh;
+    max-height: 100dvh;
+
+    overflow: auto;
+}
+main{
+    overflow: auto;
+}

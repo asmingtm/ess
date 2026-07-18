@@ -1,0 +1,15 @@
+.layout-app{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "nav-top"
+    "alertbox"
+    "main"
+    "nav-bottom";
+}
+
+.gridbox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}

@@ -1,0 +1,1 @@
+const allCodeBlocks = document.querySelectorAll('')

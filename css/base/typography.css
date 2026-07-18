@@ -1,0 +1,94 @@
+/* ================== links ================== */
+
+a{ color: var(--primary); }
+a.link{
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+    outline: none;
+}
+a.link::before{
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0%; height: 8%;
+    background: var(--primary);
+    border-radius: var(--radius);
+
+    transition: all var(--delay);
+}
+a.link:is(:hover, :focus)::before{ width: 100%; }
+
+/* ================== dividers ================== */
+
+hr{
+    width: 100%;
+    margin-block: 0.5em;
+    border-color: var(--icon);
+    border-width: var(--thickness) 0 0 0;
+}
+hr.primary{
+    border-color: var(--accent);
+}
+
+/* SYNTAX IS FOR OVERRIDE */
+
+:has( > .capsule){ > .capsule { border-radius: 100px; } } 
+:has( > :is(.sharp, .br0)){ > :is(.sharp, .br0) { border-radius: 0px; } } 
+:has( > .circle){ 
+    > .circle {
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 100%;
+    }
+}
+
+/* ================== label ================== */
+
+.label{ grid-area: label; }
+i.label{ font-style: normal; }
+
+/* ================== info ================== */
+
+.info{
+    grid-area: info;
+    color: var(--shd);
+}
+i.info{ font-style: normal; font-size: var(--size-small); }
+
+.icon{
+    grid-area: icon;
+    color: var(--icon);
+}
+
+img.icon{
+    width: var(--navbar);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius);
+    background: var(--mg);
+
+    transition: all var(--delay);
+    object-fit: contain;
+}
+*:not(.active):hover > img{
+    background: var(--fg);
+}
+.logo{
+    width: var(--size-larger);
+    border-radius: 0;
+}
+.banner{
+    grid-area: banner;
+
+    border-radius: var(--radius);
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+.avatar{
+    border-radius: 50%;
+    width: var(--size-bigger);
+}
+
+/* text align */
+
+.ta-l{text-align: left;}

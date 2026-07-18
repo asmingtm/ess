@@ -1,0 +1,19 @@
+.switch{
+    border-radius: 100px;
+    width: calc(var(--toggle) * 1.8);
+    height: var(--toggle);
+}
+.switch::before{
+    scale: 0.9;
+    background: var(--icon);
+    height: 100%; width: 53.8%;
+    border-radius: 50%;
+    left: 25%;
+}
+.switch:has(> input:checked)::before{
+    background: var(--primary);
+    left: 75%;
+}
+.switch:hover::before{
+    scale: 1;
+}
