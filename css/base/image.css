@@ -1,0 +1,12 @@
+.icon{
+    grid-area: icon;
+    color: var(--icon);
+}
+
+img.icon, img.logo{aspect-ratio: 1/1;}
+img.icon{width: var(--size-larger);}
+img.logo{width: calc(var(--navbar) / 1.5);}
+img.banner{
+    object-fit: contain;
+    width: 100%; height: fit-content;
+}

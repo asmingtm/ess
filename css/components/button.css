@@ -23,9 +23,15 @@
     font-weight: 500;
     color: white;
     > *{ color: white; }
+    > .label{text-align: center;}
     > .icon{
         font-size: var(--size-large);
         color: var(--shd);
+    }
+    > .info{
+        grid-area: label;
+        color: var(--shd);
+        font-size: var(--size-small);
     }
 
     transition: all var(--delay);
@@ -43,6 +49,11 @@
 .warn{ background: var(--error); }
 .border{ border: var(--thickness) solid var(--fg); }
 
+.border.info{
+    color: var(--shd);
+    font-size: var(--size-small);
+}
+
 /* ===============> a button which IS an icon <=============== */
 
 :is(.primary, .accent, .warn, .dull, .border, .text).icon{
@@ -56,38 +67,46 @@
 
 /* ==========> if button CONTAINS icon only <========== */
 
-:is(.primary, .accent, .warn, .dull, .border, .text):has(.icon):has(:not(.label)){ padding: var(--spacing-medium); }
+:is(.primary, .accent, .warn, .dull, .border, .text):has(> .icon):not(:has(> .label)){
+    width: fit-content;
+    padding: var(--spacing-medium);
+}
 
 /* ==========> if button CONTAINS label only <========== */
 
-:is(.primary, .accent, .warn, .dull, .border, .text):has(.label):has(:not(.icon)){ padding: var(--spacing-medium) var(--spacing-huge); }
+:is(.primary, .accent, .warn, .dull, .border, .text):has(:is(.label, .icon)):has(:not(.icon)){ padding: var(--spacing-small) var(--spacing-huge); }
 
 /* ==========> if button CONTAINS icon and label <========== */
 
-:is(.primary, .accent, .warn, .dull, .border, .text):has(.label):has(.icon){
+:is(.primary, .accent, .warn, .dull, .border, .text):has(:is(.label, .icon)):has(.icon){
+
     display: grid;
     grid-template-rows: 1fr;
 }
 
 /* if normal .icon is first child or */
 /* if .swap.icon is last child */
-:is(.primary, .accent, .warn, .dull, .border, .text):has(.label):has(:is(.icon:first-child, .icon.swap:last-child)){
+:is(.primary, .accent, .warn, .dull, .border, .text):has(:is(.label, .icon)):has(:is(.icon:first-child, .icon.swap:last-child)){
     grid-template-columns: auto 1fr;
     grid-template-areas: 'icon label';
 }
-:is(.primary, .accent, .warn, .dull, .border, .text):has(.label):has(:is(.icon:first-child, .icon.swap:last-child)):not(.wfill){
-    padding-inline: var(--spacing-bigger) var(--spacing-huge);
+:is(.primary, .accent, .warn, .dull, .border, .text):has(:is(.label, .icon)):has(:is(.icon:first-child, .icon.swap:last-child)):not(.wfill){
+    padding-inline: var(--spacing-medium) var(--spacing-larger);
 }
 
 /* if normal .icon is last child or */
 /* if .swap.icon is first child */
-:is(.primary, .accent, .warn, .dull, .border, .text):has(.label):has(:is(.icon:last-child, .icon.swap:first-child)){
+:is(.primary, .accent, .warn, .dull, .border, .text):has(:is(.label, .icon)):has(:is(.icon:last-child, .icon.swap:first-child)){
     grid-template-columns: 1fr auto;
     grid-template-areas: 'label icon';
 }
-:is(.primary, .accent, .warn, .dull, .border, .text):has(.label):has(:is(.icon:last-child, .icon.swap:first-child)):not(.wfill){
-    padding-inline: var(--spacing-huge) var(--spacing-bigger);
+:is(.primary, .accent, .warn, .dull, .border, .text):has(:is(.label, .icon)):has(:is(.icon:last-child, .icon.swap:first-child)):not(.wfill){
+    padding-inline: var(--spacing-larger) var(--spacing-medium);
 }
+
+/* ===============> disabled buttons <=============== */
+
+:is(.primary, .accent, .warn, .dull, .border, .text).wfit{padding: var(--spacing-small);}
 
 /* ===============> disabled buttons <=============== */
 
@@ -111,9 +130,9 @@
 
         transition: opacity var(--delay);
     }
-    :is(.primary, .accent, .warn, .dull, .border):is(:not(:disabled, .disabled)):hover::before{ opacity: 1; }
+    :is(.primary, .accent, .warn, .dull, .border):is(:not(:disabled, .disabled)):is(:hover, :focus)::before{ opacity: 1; }
     :is(.primary, .warn):is(:not(:disabled, .disabled))::before{  background: rgba(255, 255, 255, 0.12); }
-    .text:is(:not(:disabled, .disabled)):hover{ opacity: 0.6; }
+    .text:is(:not(:disabled, .disabled)):is(:hover, :focus){ opacity: 0.6; }
 }
 
 /* ===============> BUTTON EFFECTS <=============== */
@@ -122,7 +141,7 @@
 .dead, .active0{cursor: default;}
 
 @media (min-width: 480px){
-    .shine:is(:not(:disabled, .disabled, .hover0, .dead)):hover{ scale: 1.02; }
+    .shine:is(:not(:disabled, .disabled, .hover0, .dead)):is(:hover, :focus){ scale: 1.02; }
     .shine:is(:not(:disabled, .disabled, .hover0, .dead))::after{
         z-index: 1;
         content: '';
@@ -140,9 +159,9 @@
         rotate: 45deg;
         transition: all 500ms ease-in;
     }
-    .shine:is(:not(:disabled, .disabled)):hover::after{ left: 150%; }
+    .shine:is(:not(:disabled, .disabled)):is(:hover, :focus)::after{ left: 150%; }
 
-    .outline:hover{ outline: 2px solid white; }
+    .outline:is(:hover, :focus){ outline: 2px solid white; }
 }
 
 /* ===============> when a button is pressed <=============== */

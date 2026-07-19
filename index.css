@@ -1,8 +1,9 @@
 @import "./css/utilities/animation.css";
 @import "./css/utilities/display.css";
 @import "./css/utilities/spacing.css";
-@import "./css/base/scrollbar.css";
+@import "./css/utilities/scrollbar.css";
 
+@import "./css/base/image.css";
 @import "./css/base/reset.css";
 @import "./css/base/variables.css";
 @import "./css/base/typography.css";
@@ -19,13 +20,13 @@
 @import "./css/components/sidebar.css";
 @import "./css/components/tabs.css";
 @import "./css/components/toast.css";
+@import "./css/components/line.css";
 
 @import "./css/components/forms/checkbox.css";
 @import "./css/components/forms/input.css";
 @import "./css/components/forms/radio.css";
 @import "./css/components/forms/select.css";
 @import "./css/components/forms/switch.css";
-@import "./css/components/forms/textarea.css";
 
 @import "./css/themes/light.css";
 @import "./css/themes/dark.css";

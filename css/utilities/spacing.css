@@ -1,3 +1,14 @@
+/* =========================> WIDTH & HEIGHT <========================= */
+
+.fit{width: fit-content; height: fit-content;}
+.fill{width: 100%; height: 100%;}
+
+.wfit{width: fit-content;}
+.wfill{width: 100%;}
+
+.hfit{height: fit-content;}
+.hfill{height: 100%;}
+
 /* =========================> PADDING <========================= */
 
 .pado{padding: 0;}

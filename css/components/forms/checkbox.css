@@ -9,12 +9,13 @@
     border-radius: calc(var(--radius) / 2);
 
     min-width: var(--toggle);
+    width: var(--toggle);
+    max-width: var(--toggle);
+    
     aspect-ratio: 1 / 1;
 
     > *{ user-select: none; }
-    input{
-        display: none;
-    }
+    input{display: none;}
 
     transition: background var(--delay);
 }

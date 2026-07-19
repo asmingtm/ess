@@ -26,7 +26,7 @@
     --delay:        150ms;
 
     --size-tiny:     0.1em;
-    --size-smaller:  0.5em;
+    --size-smaller:  0.75em;
     --size-small:    0.9em;
     --size-medium:   1em;
     --size-large:    1.25em;
@@ -35,7 +35,7 @@
     --size-bigger:   2em;
     --size-huge:     2.25em;
 
-    --spacing-tiny:     0.1em;
+    --spacing-tiny:     0.25em;
     --spacing-smaller:  0.35em;
     --spacing-small:    0.5em;
     --spacing-medium:   0.8em;

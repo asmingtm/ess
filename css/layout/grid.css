@@ -1,13 +1,43 @@
-.layout-app{
+/* ==============> BODY LAYOUT <============== */
+
+.layout-nm{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "nav"
+    "main";
+}
+.layout-nms{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "nav"
+    "main"
+    "aside";
+}
+.layout-nam{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+    "nav"
+    "alert"
+    "main";
+}
+.layout-nams{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
-    "nav-top"
-    "alertbox"
+    "nav"
+    "alert"
     "main"
-    "nav-bottom";
+    "aside";
 }
+
+/* ==============> GRID LAYOUT <============== */
 
 .gridbox{
     display: grid;

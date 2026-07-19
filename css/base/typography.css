@@ -1,13 +1,13 @@
 /* ================== links ================== */
 
-a{ color: var(--primary); }
-a.link{
+.link{
+    color: var(--primary);
     text-decoration: none;
     position: relative;
     width: fit-content;
     outline: none;
 }
-a.link::before{
+.link:not(:has(> .link))::before{
     content: '';
     position: absolute;
     left: 0; bottom: 0;
@@ -17,30 +17,28 @@ a.link::before{
 
     transition: all var(--delay);
 }
-a.link:is(:hover, :focus)::before{ width: 100%; }
+.link:is(:hover, :focus)::before{ width: 100%; }
+.link:has(> .link){
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/* ================== dividers ================== */
-
-hr{
+    padding: var(--spacing-tiny);
+    gap: var(--spacing-smaller);
     width: 100%;
-    margin-block: 0.5em;
-    border-color: var(--icon);
-    border-width: var(--thickness) 0 0 0;
-}
-hr.primary{
-    border-color: var(--accent);
-}
 
-/* SYNTAX IS FOR OVERRIDE */
+    > *{font-size: var(--size-smaller);}
+    > *:not(.link){color: var(--shd);}
+}
+.link:has(> .link):is(:hover, :focus){
+    .link::before{ width: 100%; }
+}
+.link.info{
+    margin: var(--spacing-tiny) auto;
+    text-align: center;
 
-:has( > .capsule){ > .capsule { border-radius: 100px; } } 
-:has( > :is(.sharp, .br0)){ > :is(.sharp, .br0) { border-radius: 0px; } } 
-:has( > .circle){ 
-    > .circle {
-        height: 100%;
-        aspect-ratio: 1 / 1;
-        border-radius: 100%;
-    }
+    color: var(--primary);
+    font-size: var(--size-small);
 }
 
 /* ================== label ================== */
@@ -51,44 +49,18 @@ i.label{ font-style: normal; }
 /* ================== info ================== */
 
 .info{
+    font-style: normal;
+
     grid-area: info;
     color: var(--shd);
 }
-i.info{ font-style: normal; font-size: var(--size-small); }
+i.info{ font-size: var(--size-small); }
 
-.icon{
-    grid-area: icon;
-    color: var(--icon);
-}
+/* ================== TEXT-ALIGN ================== */
 
-img.icon{
-    width: var(--navbar);
-    aspect-ratio: 1 / 1;
-    border-radius: var(--radius);
-    background: var(--mg);
-
-    transition: all var(--delay);
-    object-fit: contain;
-}
-*:not(.active):hover > img.icon{
-    background: var(--fg);
-}
-.logo{
-    width: var(--size-larger);
-    border-radius: 0;
-}
-.banner{
-    grid-area: banner;
-
-    border-radius: var(--radius);
-    aspect-ratio: 16 / 9;
-    width: 100%;
-}
-.avatar{
-    border-radius: 50%;
-    width: var(--size-bigger);
-}
-
-/* text align */
-
+.ta-c{text-align: center;}
+.ta-e{text-align: end;}
+.ta-j{text-align: justify;}
 .ta-l{text-align: left;}
+.ta-r{text-align: right;}
+.ta-s{text-align: start;}

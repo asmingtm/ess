@@ -34,7 +34,7 @@
 /* Adding placeholder or <p> */
 .field > p{
     position: absolute;
-    top: 0.9em; left: 1em;
+    top: 0.8em; left: var(--size-smaller);
 
     color: var(--icon);
     transition: all var(--delay);
@@ -52,5 +52,33 @@
     }
     p{
         left: 2.7em;
+    }
+}
+
+.field > textarea{
+    min-height: var(--textarea);
+}
+
+.field:has(i):has(:is(input, textarea):is(:focus,:valid)){
+    > p{
+        opacity: 0.5;
+    }
+}
+.field:has(i):has(:is(input, textarea):is(:valid)){
+    > p{
+        opacity: 0;
+        transition: all 0ms;
+    }
+}
+.field:not(:has(i)):has(:is(input, textarea):is(:focus,:valid)){
+    > p{
+        top: 0.35em;
+        font-size: var(--size-smaller);
+    }
+}
+
+@media (min-width: 500px){
+    .field:hover{
+        border-color: var(--accent);
     }
 }
