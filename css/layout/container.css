@@ -1,6 +1,6 @@
 /* =================> MODULES <================= */
 
-.topic{
+/* .topic{
     position: relative;
 
     display: flex;
@@ -13,7 +13,35 @@
     }
 }
 label.topic > .label{
+    cursor: pointer;
+        
+    color: var(--shd);
     font-size: var(--size-small);
+} */
+
+.topic{
+    position: relative;
+    cursor: pointer;
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+    "icon label action"
+    "icon info action";
+    column-gap: var(--spacing-small);
+    
+    > .label{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    > .info{
+        position: relative;
+        overflow: auto;
+        max-height: calc(var(--spacing-huge)*1.9);
+    }
 }
 
 .action > input{display: none;}

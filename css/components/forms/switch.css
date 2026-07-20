@@ -1,6 +1,6 @@
 .switch{
     border-radius: 100px;
-    width: calc(var(--toggle) * 1.8);
+    min-width: calc(var(--toggle) * 1.8);
     height: var(--toggle);
 }
 .switch::before{
@@ -14,6 +14,6 @@
     background: var(--primary);
     left: 75%;
 }
-.switch:hover::before{
+.switch:is(:hover, :focus)::before{
     scale: 1;
 }
