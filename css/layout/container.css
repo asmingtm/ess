@@ -1,37 +1,18 @@
-/* =================> MODULES <================= */
+/* =================> TOPIC <================= */
 
-/* .topic{
+/* topic */
+:is(.topic, .opt > label){
     position: relative;
 
     display: flex;
     align-items: center;
-    gap: var(--spacing-small);
 
-    .label {
-        width: 100%;
-        font-size: var(--size-large);
-    }
-}
-label.topic > .label{
-    cursor: pointer;
-        
-    color: var(--shd);
-    font-size: var(--size-small);
-} */
-
-.topic{
-    position: relative;
-    cursor: pointer;
-
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-    "icon label action"
-    "icon info action";
     column-gap: var(--spacing-small);
     
+    > .field{grid-area: label;}
     > .label{
+        width: 100%;
+
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -42,6 +23,8 @@ label.topic > .label{
         overflow: auto;
         max-height: calc(var(--spacing-huge)*1.9);
     }
+
+    > .action{height: 100%;}
 }
 
 .action > input{display: none;}

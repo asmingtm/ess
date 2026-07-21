@@ -3,3 +3,5 @@
 
 *:has( > .parent-hover-show):hover > .parent-hover-show{ display: inherit; }
 *:has( > * > .root-parent-hover-show):hover > * > .root-parent-hover-show{ display: inherit; }
+
+.copy-content{display: none;}

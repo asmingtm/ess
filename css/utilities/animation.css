@@ -1,4 +1,13 @@
-@keyframes anim-pulse {
+@keyframes ess-pulse {
     0%, 100%{scale: 0.9;}
     50%{scale: 1.1;}
+}
+
+@keyframes ess-bg-r2l {
+    from { background-position: 0% 50%; }
+    to { background-position: 200% 50%; }
+}
+@keyframes ess-bg-r2l {
+    from { background-position: 200% 50%; }
+    to { background-position: 0% 50%; }
 }

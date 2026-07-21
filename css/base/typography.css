@@ -46,15 +46,32 @@
 .label{ grid-area: label; }
 i.label{ font-style: normal; }
 
+/* ================== error ================== */
+
+.error{ color: var(--error); }
+
 /* ================== info ================== */
 
 .info{
+    grid-area: info;
     font-style: normal;
 
     grid-area: info;
     color: var(--shd);
 }
-i.info{ font-size: var(--size-small); }
+i.info, small.info{ font-size: var(--size-small); }
+:is(ul.info, ol.info) > *{color: var(--shd);}
+
+/* ================== text-gradient ================== */
+
+.tgradient {
+    background: linear-gradient(to right, #c20b85, red, blue, #c20b85);
+    background-size: 200% 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* ================== TEXT-ALIGN ================== */
 

@@ -8,6 +8,14 @@
     "nav"
     "main";
 }
+.layout-ms{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+    "main"
+    "aside";
+}
 .layout-nms{
     display: grid;
     grid-template-columns: 1fr;

@@ -192,39 +192,39 @@
 
 /* =========================> CHILD GAP <========================= */
 
-.ch-gap-tiny{> * {gap: var(--spacing-tiny);}}
-.ch-gap-smaller{> * {gap: var(--spacing-smaller);}}
-.ch-gap-small{> * {gap: var(--spacing-small);}}
-.ch-gap-mid, .ch-gap{> * {gap: var(--spacing-medium);}}
-.ch-gap-large{> * {gap: var(--spacing-large);}}
-.ch-gap-larger{> * {gap: var(--spacing-larger);}}
-.ch-gap-big{> * {gap: var(--spacing-big);}}
-.ch-gap-bigger{> * {gap: var(--spacing-bigger);}}
-.ch-gap-huge{> * {gap: var(--spacing-huge);}}
+.ch-gap-tiny{> * {gap: calc(var(--spacing-tiny)/2);}}
+.ch-gap-smaller{> * {gap: calc(var(--spacing-smaller)/2);}}
+.ch-gap-small{> * {gap: calc(var(--spacing-small)/2);}}
+.ch-gap-mid, .ch-gap{> * {gap: calc(var(--spacing-medium)/2);}}
+.ch-gap-large{> * {gap: calc(var(--spacing-large)/2);}}
+.ch-gap-larger{> * {gap: calc(var(--spacing-larger)/2);}}
+.ch-gap-big{> * {gap: calc(var(--spacing-big)/2);}}
+.ch-gap-bigger{> * {gap: calc(var(--spacing-bigger)/2);}}
+.ch-gap-huge{> * {gap: calc(var(--spacing-huge)/2);}}
 
 /* =========================> CHILD GAP-INLINE <========================= */
 
-.ch-gapy-tiny{> * {row-gap: var(--spacing-tiny);}}
-.ch-gapy-smaller{> * {row-gap: var(--spacing-smaller);}}
-.ch-gapy-small{> * {row-gap: var(--spacing-small);}}
-.ch-gapy-mid, .ch-gapy{> * {row-gap: var(--spacing-medium);}}
-.ch-gapy-large{> * {row-gap: var(--spacing-large);}}
-.ch-gapy-larger{> * {row-gap: var(--spacing-larger);}}
-.ch-gapy-big{> * {row-gap: var(--spacing-big);}}
-.ch-gapy-bigger{> * {row-gap: var(--spacing-bigger);}}
-.ch-gapy-huge{> * {row-gap: var(--spacing-huge);}}
+.ch-gapy-tiny{> * {row-gap: calc(var(--spacing-tiny)/2);}}
+.ch-gapy-smaller{> * {row-gap: calc(var(--spacing-smaller)/2);}}
+.ch-gapy-small{> * {row-gap: calc(var(--spacing-small)/2);}}
+.ch-gapy-mid, .ch-gapy{> * {row-gap: calc(var(--spacing-medium)/2);}}
+.ch-gapy-large{> * {row-gap: calc(var(--spacing-large)/2);}}
+.ch-gapy-larger{> * {row-gap: calc(var(--spacing-larger)/2);}}
+.ch-gapy-big{> * {row-gap: calc(var(--spacing-big)/2);}}
+.ch-gapy-bigger{> * {row-gap: calc(var(--spacing-bigger)/2);}}
+.ch-gapy-huge{> * {row-gap: calc(var(--spacing-huge)/2);}}
 
 /* =========================> CHILD GAP-BLOCK <========================= */
 
-.ch-gapx-tiny{> * {column-gap: var(--spacing-tiny);}}
-.ch-gapx-smaller{> * {column-gap: var(--spacing-smaller);}}
-.ch-gapx-small{> * {column-gap: var(--spacing-small);}}
-.ch-gapx-mid, .ch-gapx{> * {column-gap: var(--spacing-medium);}}
-.ch-gapx-large{> * {column-gap: var(--spacing-large);}}
-.ch-gapx-larger{> * {column-gap: var(--spacing-larger);}}
-.ch-gapx-big{> * {column-gap: var(--spacing-big);}}
-.ch-gapx-bigger{> * {column-gap: var(--spacing-bigger);}}
-.ch-gapx-huge{> * {column-gap: var(--spacing-huge);}}
+.ch-gapx-tiny{> * {column-gap: calc(var(--spacing-tiny)/2);}}
+.ch-gapx-smaller{> * {column-gap: calc(var(--spacing-smaller)/2);}}
+.ch-gapx-small{> * {column-gap: calc(var(--spacing-small)/2);}}
+.ch-gapx-mid, .ch-gapx{> * {column-gap: calc(var(--spacing-medium)/2);}}
+.ch-gapx-large{> * {column-gap: calc(var(--spacing-large)/2);}}
+.ch-gapx-larger{> * {column-gap: calc(var(--spacing-larger)/2);}}
+.ch-gapx-big{> * {column-gap: calc(var(--spacing-big)/2);}}
+.ch-gapx-bigger{> * {column-gap: calc(var(--spacing-bigger)/2);}}
+.ch-gapx-huge{> * {column-gap: calc(var(--spacing-huge)/2);}}
 
 /* ================== center ================== */
 
@@ -488,39 +488,39 @@
 
 /* =========================> GAP <========================= */
 
-.gap-tiny{gap: var(--spacing-tiny);}
-.gap-smaller{gap: var(--spacing-smaller);}
-.gap-small{gap: var(--spacing-small);}
-.gap-mid, .gap{gap: var(--spacing-medium);}
-.gap-large{gap: var(--spacing-large);}
-.gap-larger{gap: var(--spacing-larger);}
-.gap-big{gap: var(--spacing-big);}
-.gap-bigger{gap: var(--spacing-bigger);}
-.gap-huge{gap: var(--spacing-huge);}
+.gap-tiny{gap: calc(var(--spacing-tiny)/2);}
+.gap-smaller{gap: calc(var(--spacing-smaller)/2);}
+.gap-small{gap: calc(var(--spacing-small)/2);}
+.gap-mid, .gap{gap: calc(var(--spacing-medium)/2);}
+.gap-large{gap: calc(var(--spacing-large)/2);}
+.gap-larger{gap: calc(var(--spacing-larger)/2);}
+.gap-big{gap: calc(var(--spacing-big)/2);}
+.gap-bigger{gap: calc(var(--spacing-bigger)/2);}
+.gap-huge{gap: calc(var(--spacing-huge)/2);}
 
 /* =========================> GAP-INLINE <========================= */
 
-.gapy-tiny{row-gap: var(--spacing-tiny);}
-.gapy-smaller{row-gap: var(--spacing-smaller);}
-.gapy-small{row-gap: var(--spacing-small);}
-.gapy-mid, .gapy{row-gap: var(--spacing-medium);}
-.gapy-large{row-gap: var(--spacing-large);}
-.gapy-larger{row-gap: var(--spacing-larger);}
-.gapy-big{row-gap: var(--spacing-big);}
-.gapy-bigger{row-gap: var(--spacing-bigger);}
-.gapy-huge{row-gap: var(--spacing-huge);}
+.gapy-tiny{row-gap: calc(var(--spacing-tiny)/2);}
+.gapy-smaller{row-gap: calc(var(--spacing-smaller)/2);}
+.gapy-small{row-gap: calc(var(--spacing-small)/2);}
+.gapy-mid, .gapy{row-gap: calc(var(--spacing-medium)/2);}
+.gapy-large{row-gap: calc(var(--spacing-large)/2);}
+.gapy-larger{row-gap: calc(var(--spacing-larger)/2);}
+.gapy-big{row-gap: calc(var(--spacing-big)/2);}
+.gapy-bigger{row-gap: calc(var(--spacing-bigger)/2);}
+.gapy-huge{row-gap: calc(var(--spacing-huge)/2);}
 
 /* =========================> GAP-BLOCK <========================= */
 
-.gapx-tiny{column-gap: var(--spacing-tiny);}
-.gapx-smaller{column-gap: var(--spacing-smaller);}
-.gapx-small{column-gap: var(--spacing-small);}
-.gapx-mid, .gapx{column-gap: var(--spacing-medium);}
-.gapx-large{column-gap: var(--spacing-large);}
-.gapx-larger{column-gap: var(--spacing-larger);}
-.gapx-big{column-gap: var(--spacing-big);}
-.gapx-bigger{column-gap: var(--spacing-bigger);}
-.gapx-huge{column-gap: var(--spacing-huge);}
+.gapx-tiny{column-gap: calc(var(--spacing-tiny)/2);}
+.gapx-smaller{column-gap: calc(var(--spacing-smaller)/2);}
+.gapx-small{column-gap: calc(var(--spacing-small)/2);}
+.gapx-mid, .gapx{column-gap: calc(var(--spacing-medium)/2);}
+.gapx-large{column-gap: calc(var(--spacing-large)/2);}
+.gapx-larger{column-gap: calc(var(--spacing-larger)/2);}
+.gapx-big{column-gap: calc(var(--spacing-big)/2);}
+.gapx-bigger{column-gap: calc(var(--spacing-bigger)/2);}
+.gapx-huge{column-gap: calc(var(--spacing-huge)/2);}
 
 /* ================== center ================== */
 
