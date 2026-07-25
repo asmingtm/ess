@@ -1,0 +1,27 @@
+/* =================> TOPIC <================= */
+
+:is(.topic, .opt > label){
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    column-gap: var(--space-4);
+    
+    > .field{grid-area: label;}
+    > .label{
+        width: 100%;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    > .info{
+        position: relative;
+        overflow: auto;
+        max-height: calc(var(--space-9)*1.9);
+    }
+
+    > .action{height: 100%;}
+}

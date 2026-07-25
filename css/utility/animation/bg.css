@@ -1,0 +1,9 @@
+@keyframes bg-pulse {
+    0%, 100%{color: var(--txt);}
+    50%{color: var(--shd);}
+}
+
+@keyframes bg-r2l {
+    from { background-position: 0% 50%; }
+    to { background-position: 200% 50%; }
+}

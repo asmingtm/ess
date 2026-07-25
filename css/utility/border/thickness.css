@@ -1,0 +1,10 @@
+.br-thick{
+    border-width: var(--thickness);
+}
+.brt-thick{
+    border-top-width: var(--thickness);
+}
+
+.br-style{
+    border-style: solid;
+}

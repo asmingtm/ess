@@ -1,0 +1,23 @@
+/* show the element */
+.show{display: none;}
+
+/* show the element's children */
+.show-children > *{display: none;}
+
+/* show the element's first child */
+.show-first-child:first-child{display: none;}
+
+/* show the element's last child */
+.show-last-child:last-child{display: none;}
+
+/* show the element's parent */
+:has(> .show-parent){display: none;}
+
+/* show the element's root parent */
+.root:has(> .show-root){display: none;}
+
+/* show when element's parent is hovered */
+:has(> .show-parent-hover):hover > .show-parent-hover{display: none;}
+
+/* show when element's root is hovered */
+.root:has(.show-root-hover):hover .show-root-hover{display: none;}

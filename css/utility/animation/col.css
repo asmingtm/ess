@@ -1,0 +1,4 @@
+@keyframes col-pulse {
+    0%, 100%{color: var(--txt);}
+    50%{color: var(--shd);}
+}

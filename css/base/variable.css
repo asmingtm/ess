@@ -1,0 +1,53 @@
+:root {
+    /* ==========> BRAND <========== */
+
+    --primary:  hsl(260, 68%, 40%);
+    --accent:   hsla(260, 68%, 40%, 0.5);
+    --tritary:  hsl(260, 68%, 40%, 0.25);
+
+    /* ==========> DISCLAMER <========== */
+
+    --error:    hsl(0, 75%, 45%);
+    --warn:     hsl(0, 75%, 45%, 0.1);
+
+    /* ==========> WIDGETS <========== */
+
+    --alertbox:     2.8em;
+    --navbar:       4em;
+    --toggle:       1.1em;
+    --textarea:     4em;
+
+    /* ==========> BORDER <========== */
+
+    --thickness:    1px;
+    --radius:       8px;
+
+    /* ==========> OTHER <========== */
+
+    --blur:         10px;
+    --delay:        150ms;
+
+    /* ==========> SIZING <========== */
+
+    --size-1: 0.6em;
+    --size-2: 0.7em;
+    --size-3: 0.8em;
+    --size-4: 0.9em;
+    --size-5: 1em;
+    --size-6: 1.2em;
+    --size-7: 1.4em;
+    --size-8: 1.8em;
+    --size-9: 2em;
+
+    /* ==========> SPACE <========== */
+
+    --space-1: 0.1em;
+    --space-2: 0.25em;
+    --space-3: 0.5em;
+    --space-4: 0.75em;
+    --space-5: 1em;
+    --space-6: 1.25em;
+    --space-7: 1.5em;
+    --space-8: 1.75em;
+    --space-9: 2em;
+}

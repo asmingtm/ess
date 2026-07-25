@@ -1,0 +1,203 @@
+.dropdown{
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    input:is([type="checkbox"], [type="radio"]){display: none;}
+
+    > label, > .opt{
+        cursor: pointer;
+        user-select: none;
+        background: var(--mg);
+
+        padding: var(--space-5);
+        border-radius: var(--radius);
+    }
+
+    > label.topic{
+        z-index: 1;
+
+        > .label{
+            color: var(--shd);
+            font-weight: normal;
+        }
+
+        transition: all var(--delay);
+    }
+
+    > label.topic::after{
+        content: '';
+        position: absolute;
+        top: 47%; right: 1.5em;
+        translate: 0 -50%;
+        height: 15%;
+        aspect-ratio: 1 / 1;
+        background: transparent;
+        rotate: 45deg;
+        border: calc(var(--thickness) * 1.1) solid var(--shd);
+        border-top: 0; border-left: 0;
+
+        transition: all var(--delay);
+    }
+
+    > .opt{
+        position: absolute;
+        top: 0%; left: 50%;
+        translate: -50% 0;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%; max-height: 0;
+
+        overflow: auto;
+
+        border-top: 0 solid var(--fg);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        transition: all var(--delay);
+
+        > label{
+            cursor: pointer;
+            padding: var(--space-5);
+
+            transition: background var(--delay);
+        }
+    }
+}
+
+.dropdown:has(> label > input:checked){
+    transition: all var(--delay);
+
+    > label.topic{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    > label.topic::after{rotate: -135deg;}
+
+    > .opt{
+        top: calc(var(--space-5) * 4 - var(--thickness));
+        border-top-width: var(--thickness);
+        max-height: 17em;
+    }
+}
+
+.dropdown > .opt > label:has(input:checked){
+    background: var(--tritary);
+}
+
+@media (min-width: 480px){
+    .dropdown{
+        > label.topic:hover{background: var(--fg);}
+        > .opt > label:hover{background: var(--fg);}
+    }
+    .dropdown > .opt > label:has(input:checked):hover{
+        background: var(--accent);
+    }
+}
+
+/* .dropdown{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.8em;
+    gap: 0.3em;
+
+    background: var(--mg);
+    border-radius: var(--radius);
+
+    input { display: none; }
+
+    * {
+        user-select: none;
+        font-size: 0.95em;
+        color: var(--shd);
+    }
+
+    label.topic{
+        color: var(--shd);
+
+        display: flex;
+        gap: 0.5em;
+
+        p{
+            font-weight: normal;
+        }
+    }
+
+    label.topic::after{
+        content: '';
+        position: absolute;
+        top: 47%; right: 1.5em;
+        translate: 0 -50%;
+        height: 15%;
+        aspect-ratio: 1 / 1;
+        background: transparent;
+        rotate: 45deg;
+        border: calc(var(--thickness) * 1.1) solid var(--shd);
+        border-top: 0; border-left: 0;
+
+        transition: all var(--delay);
+    }
+
+    li{
+        display: flex;
+        z-index: 1;
+        position: absolute;
+        top: 100%; left: 50%;
+        translate: -50% 0;
+        width: 100%; gap: 0;
+        border-radius: 0 0 var(--radius) var(--radius);
+
+        background: var(--mg);
+        overflow: auto;
+
+        clip-path: inset(0 0 100% 0);
+
+        transition: all var(--delay);
+
+        > {
+            cursor: pointer;
+            padding: 1em;
+
+            transition: all var(--delay);
+        }
+
+        > :hover{
+            background: var(--fg);
+        }
+
+        > :has(input:checked){
+            background: var(--accent);
+        }
+    }
+
+    transition: all 500ms;
+}
+
+.dropdown:has(> input:checked){
+    border-radius: var(--radius) var(--radius) 0 0;
+    
+    transition: all 50ms;
+    transition: background var(--delay);
+
+    label.topic::after{
+        rotate: -135deg;
+    }
+
+    li{
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.dropdown:not(:has(> input:checked)):hover{
+    background: var(--fg);
+} */

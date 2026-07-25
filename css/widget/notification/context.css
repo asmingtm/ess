@@ -1,0 +1,88 @@
+.context{
+    z-index: 2;
+    position: fixed;
+    top: 0; left: 0;
+
+    display: flex;
+    flex-direction: column;
+    
+    background: var(--mg);
+    border-radius: var(--radius);
+
+    overflow: auto;
+    width: 100%;
+    max-width: 240px;
+
+    .action{
+        background: transparent;
+        outline: none; border: none;
+
+        position: relative;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+
+        gap: var(--space-5);
+        padding: var(--space-4) var(--size-6);
+
+        > .label{
+            text-align: left;
+            width: 100%;
+
+            opacity: 0.7;
+            font-size: var(--size-5);
+        }
+
+        > .snippet{
+            padding-block: 0;
+            font-size: var(--size-4);
+            color: var(--icon);
+        }
+
+        > .icon{
+            color: var(--icon);
+            font-size: var(--size-7);
+        }
+    }
+    > .action.danger{
+        * {
+            opacity: 1;
+            color: var(--error);
+        }
+        .snippet {
+            opacity: 0.8;
+            border-color: var(--warn);
+        }
+    }
+}
+
+/* for hover effect */
+
+.context > .action::before{
+    z-index: 1;
+    content: '';
+
+    position: absolute;
+    top: 50%; left: 50%;
+    translate: -50% -50%;
+    width: 100%; height: 100%;
+
+    background: rgba(255, 255, 255, 0.03);
+    opacity: 0;
+
+    transition: all var(--delay);
+}
+.context > .action.danger::before{
+    background: var(--warn);
+}
+.context > .action:first-of-type::before{
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+.context > .action:last-of-type::before{
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+
+.context > .action:hover::before{opacity: 1;}

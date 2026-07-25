@@ -5,62 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Style Sheet</title>
     <link rel="stylesheet" href="index.css">
-    <script type="module" src="index.js"></script>
+    <script defer type="module" src="index.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body class="flexy center gap padx">
-    <div class="flexy center gap mary-auto">
-        <h1 class="mart tgradient" style="
-            animation: ess-bg-r2l 3s linear infinite;
-        ">in simple words,</h1>
-        <span class="flex center gap-small marr-big marb-small">
-            <code class="snippet dead">HTML</code>
-            <i class="icon material-icons-round">add</i>
-            <code class="snippet dead">CSS</code>
-            <i class="icon material-icons-round">add</i>
-            <code class="snippet dead">JS</code>
-        </span>
-        <i class="icon material-icons-round tgradient" style="
-            animation: ess-bg-r2l 3s linear infinite;">
-            south
-        </i>
-        <img src="./favicon.ico" alt="ess" class="logo-big" style="animation: ess-pulse 1s ease infinite;">
-    </div>
-    <hr class="wmax-tab">
-    <div class="flexy ai-center gap mary-auto">
-        <span class="flex gap">
-            <a id="copy-cmd" class="border action">
-                <i class="icon material-icons-round swap">copy</i>
-                <p class="label">npm</p>
-            </a>
-            <a target="_blank" href="https://github.com/asmingtm/ess" class="border">
-                <i class="icon material-icons-round swap">launch</i>
-                <p class="label">GitHub</p>
-            </a>
-        </span>
-        <span class="mart-larger">
-            <i class="info">by</i>
-            <a href="https:/paicho.org" class="link">paicho.org</a>
-            <i class="info">team</i>
-        </span>
-    </div>
-    <script type="module">
-        import ess from "/index.js";
-        ess.snackbar.create("copiedSucess", "");
-        ess.snackbar.create("copiedFailed", "");
-
-        const npmCmd = "npm install github:asmingtm/ess";
-        const copyCmd = document.getElementById('copy-cmd');
-
-        copyCmd.addEventListener('click', async () => {
-            try {
-                await navigator.clipboard.writeText(npmCmd);
-                ess.snackbar.show("copiedSucess");
-            } catch (err) {
-                console.error("Failed to copy:", err);
-                ess.snackbar.show("copiedFailed");
-            }
-        });
-    </script>
+<body class="flexy pad gap">
+    <header class="topic">
+        <i class="icon material-icons-round">folder</i>
+        <p class="label">Projects</p>
+        <div class="action select">
+            <label for="view-list">
+                <input type="radio" name="view" id="view-list" checked>
+                <i class="icon material-icons-round">menu</i>
+            </label>
+            <label for="view-grid">
+                <input type="radio" name="view" id="view-grid">
+                <i class="icon material-icons-round">grid_view</i>
+            </label>
+        </div>
+    </header>
+    <section class="solid">
+        <div class="flex wrap">
+            <i class="icon material-icons-round" style="color: var(--primary)">article</i>
+            <p class="label">
+                Docs
+                <i class="icon material-icons-round">star</i>
+            </p>
+            <i class="info">22 Apr</i>
+            <label for="ctxt-proj" class="action text circle icon material-icons-round">
+                more_vert
+            </label>
+        </div>
+    </section>
 </body>
-</html
+</html>

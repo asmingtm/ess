@@ -1,0 +1,4 @@
+@keyframes size-pulse {
+    0%, 100%{font-size: 0.9;}
+    50%{font-size: 1.1;}
+}

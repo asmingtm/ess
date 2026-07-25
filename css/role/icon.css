@@ -1,0 +1,5 @@
+.icon{
+    grid-area: icon;
+    user-select: none;
+    color: var(--icon);
+}

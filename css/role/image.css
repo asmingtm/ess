@@ -1,0 +1,25 @@
+img.icon, .avatar, .logo, .logo-big{
+    aspect-ratio: 1/1;
+}
+img.icon, .avatar{
+    width: var(--size-5);
+}
+
+.avatar{
+    border-radius: 100%;
+}
+
+.banner{
+    object-fit: contain;
+    width: 100%; height: fit-content;
+    border-radius: var(--radius);
+}
+
+.logo{width: calc(var(--navbar) / 1.5);}
+.logo-big{width: var(--navbar);}
+
+.ratio-sq{aspect-ratio: 1 / 1;}
+.ratio-tv{aspect-ratio: 16 / 9;}
+.ratio-mbl{aspect-ratio: 9/16;}
+.ratio-pc{aspect-ratio: 5/4;}
+.ratio-cam{aspect-ratio: 3/2;}

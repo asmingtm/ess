@@ -1,26 +1,17 @@
-// ==================> IMPORT <================== //
+/* ========== IMPORT ========== */
 
-import "./js/components/forms/input.js";
-import "./js/components/forms/select.js";
-
-import "./js/components/dropdown.js";
-import "./js/components/modal.js";
-import "./js/components/tabs.js";
-import "./js/components/toast.js";
-import "./js/components/snackbar.js";
-
+// core
 import "./js/core/config.js";
 import "./js/core/init.js";
 
-import "./js/utilities/display.js";
-import "./js/utilities/storage.js";
+// notification
+import essContext from "./js/widget/notification/context.js";
+import essSnackbar from "./js/widget/notification/snackbar.js";
 
-import "./js/theme.js";
-import essSnackbar from "./js/components/snackbar.js";
+/* ========== EXPORT ========== */
 
-// ==================> TEST <================== //
-
-const ess= {};
+const ess = {};
 ess.snackbar = essSnackbar;
+ess.context = essContext;
 
 export default ess;

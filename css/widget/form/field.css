@@ -1,0 +1,84 @@
+.field{
+    width: 100%;
+    
+    position: relative;
+    cursor: text;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: var(--space-4);
+    
+    border: var(--thickness) solid var(--fg);
+    border-radius: var(--radius);
+    
+    transition: all var(--delay);
+}
+
+.field:has(:is(input, textarea):focus){
+    border-color: var(--primary);
+}
+.field > input, textarea{
+    padding-inline: var(--space-5);
+    padding-top: var(--space-6);
+    flex-grow: 1;
+
+    background: transparent;
+    border: none; outline: none;
+
+    resize: vertical;
+    min-height: var(--size-9);
+}
+
+/* Adding placeholder or <p> */
+.field > p{
+    position: absolute;
+    top: 0.8em; left: var(--size-3);
+
+    color: var(--icon);
+    transition: all var(--delay);
+}
+
+/* If it contains an icon or a <i> inside the label. */
+.field > i{
+    position: relative;
+    font-size: var(--size-7);
+}
+.field:has(.icon) {
+    padding-inline: var(--space-5);
+    input{
+        padding: var(--space-4);
+    }
+    p{
+        left: 2.7em;
+    }
+}
+
+.field > textarea{
+    min-height: var(--textarea);
+}
+
+.field:has(i):has(:is(input, textarea):is(:focus,:valid)){
+    > p{
+        opacity: 0.5;
+    }
+}
+.field:has(i):has(:is(input, textarea):is(:valid)){
+    > p{
+        opacity: 0;
+        transition: all 0ms;
+    }
+}
+.field:not(:has(i)):has(:is(input, textarea):is(:focus,:valid)){
+    > p{
+        top: 0.35em;
+        font-size: var(--size-3);
+    }
+}
+
+@media (min-width: 500px){
+    .field:hover{
+        border-color: var(--accent);
+    }
+}

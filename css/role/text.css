@@ -1,0 +1,77 @@
+/* ========== label ========== */
+.label, p.info{
+    font-size: var(--size-5);
+}
+
+.label{
+    grid-area: label;
+}
+i.label{ font-style: normal; }
+
+/* ========== ERROR ========== */
+
+.error{ color: var(--error); }
+
+/* ========== INFO ========== */
+
+.info{
+    grid-area: info;
+    font-style: normal;
+
+    grid-area: info;
+    color: var(--shd);
+}
+i.info, small.info{ font-size: var(--size-4); }
+:is(ul.info, ol.info) > *{color: var(--shd);}
+
+/* ========== TEXT-ALIGN ========== */
+
+.ta-c{text-align: center;}
+.ta-e{text-align: end;}
+.ta-j{text-align: justify;}
+.ta-l{text-align: left;}
+.ta-r{text-align: right;}
+.ta-s{text-align: start;}
+
+/* ========== links ========== */
+
+.link{
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+    outline: none;
+}
+.link:not(:has(> .link))::before{
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0%; height: 8%;
+    background: var(--primary);
+    border-radius: var(--radius);
+
+    transition: all var(--delay);
+}
+.link:is(:hover, :focus)::before{ width: 100%; }
+.link:has(> .link){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--spacing-tiny);
+    gap: var(--spacing-4);
+    width: 100%;
+
+    > *{font-size: var(--size-4);}
+    > *:not(.link){color: var(--shd);}
+}
+.link:has(> .link):is(:hover, :focus){
+    .link::before{ width: 100%; }
+}
+.link.info{
+    margin: var(--spacing-tiny) auto;
+    text-align: center;
+
+    color: var(--primary);
+    font-size: var(--size-5);
+}

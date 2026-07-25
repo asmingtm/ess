@@ -1,0 +1,11 @@
+.br-primary{border-color: var(--primary);}
+.br-accent{border-color: var(--accent);}
+
+.br-bg{border-color: var(--bg);}
+.br-mg{border-color: var(--mg);}
+.br-fg{border-color: var(--fg);}
+.br-lg{border-color: var(--lg);}
+
+.br-txt{border-color: var(--txt);}
+.br-shd{border-color: var(--shd);}
+.br-icon{border-color: var(--icon);}

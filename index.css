@@ -1,33 +1,72 @@
-@import "./css/utilities/animation.css";
-@import "./css/utilities/display.css";
-@import "./css/utilities/spacing.css";
-@import "./css/utilities/scrollbar.css";
-
-@import "./css/base/image.css";
+/* ------------> BASE <------------ */
+@import "./css/base/import.css";
 @import "./css/base/reset.css";
-@import "./css/base/variables.css";
-@import "./css/base/typography.css";
+@import "./css/base/variable.css";
 
-@import "./css/layout/container.css";
-@import "./css/layout/flex.css";
-@import "./css/layout/grid.css";
-@import "./css/components/alertbox.css";
+/* ------------> ROLE <------------ */
+@import "./css/role/action.css";
+@import "./css/role/content.css";
+@import "./css/role/icon.css";
+@import "./css/role/image.css";
+@import "./css/role/text.css";
 
-@import "./css/components/forms/checkbox.css";
-@import "./css/components/forms/field.css";
-@import "./css/components/forms/radio.css";
-@import "./css/components/forms/select.css";
-@import "./css/components/forms/switch.css";
+/* ------------> THEME <------------ */
+@import "./css/theme/dark.css";
+@import "./css/theme/light.css";
 
-@import "./css/components/button.css";
-@import "./css/components/dropdown.css";
-@import "./css/components/modal.css";
-@import "./css/components/navbar.css";
-@import "./css/components/sidebar.css";
-@import "./css/components/tabs.css";
-@import "./css/components/toast.css";
-@import "./css/components/snackbar.css";
-@import "./css/components/line.css";
+/* ------------> UTILITY <------------ */
 
-@import "./css/themes/light.css";
-@import "./css/themes/dark.css";
+/* animation */
+@import "./css/utility/animation/bg.css";
+@import "./css/utility/animation/col.css";
+@import "./css/utility/animation/pos.css";
+@import "./css/utility/animation/scale.css";
+@import "./css/utility/animation/size.css";
+
+/* border */
+@import "./css/utility/border/color.css";
+@import "./css/utility/border/radius.css";
+@import "./css/utility/border/thickness.css";
+
+/* spacing */
+@import "./css/utility/spacing/gap.css";
+@import "./css/utility/spacing/margin.css";
+@import "./css/utility/spacing/padding.css";
+@import "./css/utility/spacing/scale.css";
+@import "./css/utility/spacing/size.css";
+
+/* visibility */
+@import "./css/utility/visibility/hide.css";
+@import "./css/utility/visibility/show.css";
+
+/* ------------> WIDGET <------------ */
+
+/* form */
+@import "./css/widget/form/button.css";
+@import "./css/widget/form/checkbox.css";
+@import "./css/widget/form/dropdown.css";
+@import "./css/widget/form/field.css";
+@import "./css/widget/form/line.css";
+@import "./css/widget/form/radio.css";
+@import "./css/widget/form/select.css";
+@import "./css/widget/form/switch.css";
+
+/* layout */
+@import "./css/widget/layout/container.css";
+@import "./css/widget/layout/flex.css";
+@import "./css/widget/layout/grid.css";
+@import "./css/widget/layout/scroll.css";
+@import "./css/widget/layout/solid.css";
+@import "./css/widget/layout/wrap.css";
+
+/* navigation */
+@import "./css/widget/navigation/navbar.css";
+@import "./css/widget/navigation/sidebar.css";
+@import "./css/widget/navigation/tabs.css";
+
+/* notification */
+@import "./css/widget/notification/alertbox.css";
+@import "./css/widget/notification/context.css";
+@import "./css/widget/notification/modal.css";
+@import "./css/widget/notification/snackbar.css";
+@import "./css/widget/notification/toast.css";

@@ -1,0 +1,23 @@
+/* hide the element */
+.hide{display: none !important;}
+
+/* hide the element's children */
+.hide-children > *{display: none !important;}
+
+/* hide the element's first child */
+.hide-first-child:first-child{display: none !important;}
+
+/* hide the element's last child */
+.hide-last-child:last-child{display: none !important;}
+
+/* hide the element's parent */
+:has(> .hide-parent){display: none !important;}
+
+/* hide the element's root parent */
+.root:has(> .hide-root){display: none !important;}
+
+/* hide when element's parent is hovered */
+:has(> .hide-parent-hover):hover > .hide-parent-hover{display: none !important;}
+
+/* hide when element's root is hovered */
+.root:has(.hide-root-hover):hover .hide-root-hover{display: none !important;}

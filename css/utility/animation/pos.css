@@ -1,0 +1,4 @@
+@keyframes pos-r2l {
+    0%{right: 100%;}
+    100%{left: 100%;}
+}
