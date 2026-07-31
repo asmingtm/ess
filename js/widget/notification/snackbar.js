@@ -24,6 +24,7 @@ let createdSnackbar = [
     }
 ];
 
+// create resuable snackbar
 essSnackbar.create = function(inputName, inputHTML){
     const newID = iSB + 1; iSB = newID;
     createdSnackbar[iSB] = {
@@ -39,6 +40,7 @@ essSnackbar.delete = function(name){};
 essSnackbar.show = function(name, duration){};
 essSnackbar.hide = function(name, duration){};
 
+// show snackbar detail (for debugging)
 essSnackbar.console = function(name){
     let foundSB = {};
     createdSnackbar.forEach (snackbar => {

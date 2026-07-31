@@ -1,4 +1,5 @@
 /* =================> SOLID-BACKGROUNDS <================= */
+
 .solid{
     background: var(--mg);
     border-radius: var(--radius);
@@ -8,7 +9,7 @@
     display: flex;
     flex-direction: column;
 
-    padding: var(--space-5);
+    padding: var(--space-4);
     border-radius: var(--radius);
 }
 

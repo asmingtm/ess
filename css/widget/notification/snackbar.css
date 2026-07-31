@@ -1,0 +1,75 @@
+#ess-root-snackbar{
+    z-index: 9;
+
+    position: fixed;
+    bottom: 0; left: 50%;
+    translate: -50% 0%;
+    width: 100%; height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    align-items: center;
+    justify-content: end;
+
+    gap: var(--space-3);
+    padding: var(--space-5);
+}
+
+.snackbar{
+    display: flex;
+    column-gap: var(--space-3);
+
+    align-items: center;
+
+    width: 100%;
+    max-width: 420px;
+    padding: var(--space-3) var(--space-4);
+    background: var(--mg);
+    border-radius: var(--radius);
+
+    > .label{
+        text-align: ;
+        font-size: var(--size-3);
+        color: var(--shd);
+        width: 100%;
+    }
+
+    > .action{
+        gap: var(--space-3);
+        padding: var(--space-3) var(--space-7) !important;
+        height: fit-content;
+
+        > .label{font-size: var(--size-3);}
+        > .icon{font-size: var(--size-4);}
+    }
+}
+
+.snackbar:has(> .info){
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    'icon label action'
+    'icon info action';
+
+    > .label{font-size: var(--size-3);}
+    > .info{font-size: var(--size-2);}
+}
+
+.snackbar.error{
+    background: var(--warn);
+    border: var(--thickness) solid var(--error);
+
+    > .label, .icon{color: var(--error);}
+    > .icon{opacity: 0.6;}
+}
+
+.snackbar.sucess{
+    background: var(--tritary);
+    border: var(--thickness) solid var(--accent);
+
+    > .label, .icon{color: white;}
+    > .icon{opacity: 0.6;}
+}

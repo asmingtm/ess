@@ -8,10 +8,17 @@ import "./js/core/init.js";
 import essContext from "./js/widget/notification/context.js";
 import essSnackbar from "./js/widget/notification/snackbar.js";
 
-/* ========== EXPORT ========== */
+/* ========== BUNDLE ========== */
 
 const ess = {};
+
 ess.snackbar = essSnackbar;
 ess.context = essContext;
+
+/* ========== TESTING ========== */
+
+
+
+/* ========== EXPORT ========== */
 
 export default ess;
