@@ -22,10 +22,18 @@
 form.block{
     display: flex;
     flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
     gap: var(--space-4);
 
     width: 100%;
     max-width: 400px;
+
+    > :is(.primary, .accent, .dull, .warn, .border){
+        width: 100%;
+    }
 }
 code.block{
     padding: 0;
